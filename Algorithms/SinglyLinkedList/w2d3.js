@@ -18,7 +18,7 @@ class SinglyLinkedList {
 
         var new_node = new ListNode(value);
 
-        if(this.head == null) {
+        if (this.head == null) {
             this.head = new_node;
             this.tail = new_node;
         }

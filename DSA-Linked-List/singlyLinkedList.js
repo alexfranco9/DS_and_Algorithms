@@ -38,19 +38,18 @@ class LinkedList {
     printList() {
       const array = [];
       let currentNode = this.head;
-      while(currentNode !== null){
-          array.push(currentNode.value)
+      while (currentNode !== null){
+          array.push(currentNode.value);
           currentNode = currentNode.next
       }
       return array;
     }
     insert(index, value){
       //Check for proper parameters;
-      if(index >= this.length) {
+      if (index >= this.length) {
         console.log('yes')
         return this.append(value);
       }
-      
       const newNode = {
         value: value,
         next: null
@@ -66,7 +65,7 @@ class LinkedList {
       //Check parameters
       let counter = 0;
       let currentNode = this.head;
-      while(counter !== index){
+      while (counter !== index){
         currentNode = currentNode.next;
         counter++;
       }
@@ -86,12 +85,12 @@ class LinkedList {
         }
         let first = this.head;
         this.tail = this.head;
-        let sencond = first.next;
+        let second = first.next;
       while (second) {
-          const temp = sencond.next;
+          const temp = second.next;
           second.next = first;
-          first = sencond;
-          sencond = temp;
+          first = second;
+          second = temp;
       }
       this.head.next = null;
       this.head = first;
@@ -100,13 +99,15 @@ class LinkedList {
   }
   
   let myLinkedList = new LinkedList(10);
-  myLinkedList.append(5)
-  myLinkedList.append(16)
-  myLinkedList.prepend(1)
-  myLinkedList.printList()
-  myLinkedList.insert(2, 99)
-  myLinkedList.insert(20, 88)
-  myLinkedList.printList()
-  myLinkedList.remove(2)
-  myLinkedList.reverse()
+  myLinkedList.append(5);
+  myLinkedList.append(16);
+  myLinkedList.prepend(1);
+  myLinkedList.printList();
+  myLinkedList.insert(2, 99);
+  myLinkedList.insert(20, 88);
+  console.log(myLinkedList.printList());
+  // myLinkedList.remove(2);
+  myLinkedList.reverse();
+  console.log('**********List ** Reversed************');
+  console.log(myLinkedList.printList());
   

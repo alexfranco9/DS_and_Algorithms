@@ -36,15 +36,33 @@ class DoublyLinkedList {
     printList() {
       const array = [];
       let currentNode = this.head;
-      while(currentNode !== null){
+      while (currentNode !== null){
         array.push(currentNode.value)
         currentNode = currentNode.next
       }
       return array;
     }
+    display() {
+
+      var output = '';
+      var runner = this.head;
+
+      if (this.head == null) {
+          return 'empty';
+      }
+
+      while (runner != null) {
+          if (runner == this.tail) {
+              var output = output + runner.value;
+              return output;
+          }
+          var output = output + runner.value + ' - '
+          runner = runner.next;
+      }
+  }
     insert(index, value){
       //Check for proper parameters;
-      if(index >= this.length) {
+      if (index >= this.length) {
         return this.append(value);
       }
       
@@ -78,9 +96,10 @@ class DoublyLinkedList {
   let myLinkedList = new DoublyLinkedList(10);
   myLinkedList.append(5)
   myLinkedList.append(16)
-  myLinkedList.prepend(1)
-  myLinkedList.insert(2, 99)
+  // myLinkedList.prepend(1)
+  // myLinkedList.insert(2, 99)
   // myLinkedList.insert(20, 88)
-  // myLinkedList.printList()
+  console.log(myLinkedList.printList());
   // myLinkedList.remove(2)
   // myLinkedList.reverse()
+  // console.log(myLinkedList.display());
