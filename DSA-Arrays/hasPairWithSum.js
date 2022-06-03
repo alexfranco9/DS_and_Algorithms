@@ -7,7 +7,6 @@ function hasPairWithSum(arr, sum){
               return true;
        }
     }
-  
     return false;
   }
   
@@ -24,4 +23,4 @@ function hasPairWithSum(arr, sum){
     return false;
   }
   
-  hasPairWithSum2([6,4,3,2,1,7], 9)
+  console.log(hasPairWithSum2([6,4,3,2,1,7], 9))
