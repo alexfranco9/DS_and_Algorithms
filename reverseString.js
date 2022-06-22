@@ -4,14 +4,14 @@
 // First solution
 function reverseString(str) {
     const backwards = [];
-    const totaItems = str.length - 1;
+    const totalItems = str.length - 1;
 
     if (!str || str.length < 2 || typeof str !== 'string') {
         return 'Not a valid input';
     }
 
-    for (let i = totaItems; i >= 0; i--) {
-        backwards.push(i);
+    for (let i = totalItems; i >= 0; i--) {
+        backwards.push(str[i]);
     }
     return backwards.join('');
 };
