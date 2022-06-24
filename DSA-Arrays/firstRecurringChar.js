@@ -11,7 +11,7 @@ function firstRecurringCharacter(input) {
         console.log(map);
     }
     return undefined;
-}
+};
 
 function firstRecurringCharacter2(input) {
     for (let i = 0; i < input.length; i++) {
@@ -22,7 +22,7 @@ function firstRecurringCharacter2(input) {
         }
     }
     return undefined;
-}
+};
 
 console.log(firstRecurringCharacter([2,5,5,2,3,6,9,7]));
 console.log('*******************************************');
