@@ -14,12 +14,33 @@ function bubbleSort(arr){
             }
         }
     }
-    return arr
-}
+    return arr;
+};
+
+function bubbleSort2(array){
+    // Create a copy of the original array since bubbleSort will mutate the original array.
+    const arr = [...array];
+    
+    // We need a double for loop to implent it.
+    for(let i = 0; i < arr.length; i++){
+        for(let j = 0; j < arr.length; j++){
+            // We swap if the at index j is bigger than the number at index j+1.
+            if(arr[j] > arr[j + 1]){
+                // We create a variable so we have reference, since it will be changed.
+                const temp = arr[j];
+                arr[j] = arr[j + 1];
+                arr[j + 1] = temp;
+            }
+        }
+    }
+    return arr;
+};
+
 //Test log
-console.log(bubbleSort([3,9,7,2,5]))
-console.log(bubbleSort([8,5,3,7,9,1]))
-console.log(bubbleSort([6,5.5,3,7,5,9,1]))
+console.log(bubbleSort([3,9,7,2,5]));
+console.log(bubbleSort([8,5,3,7,9,1]));
+console.log(bubbleSort([6,5.5,3,7,5,9,1]));
+console.log(bubbleSort2([1,5,10,22,300,2,500,67]));
 
 //Selection Sort
 //Given an array of numbers, sort the numbers by finding the smallest number in the array and moving it to the beginning. Then iterate through everything except the first number, which is now sorted, and find the next smallest value and move it to index 1. Keep doing this until all values are sorted. 
