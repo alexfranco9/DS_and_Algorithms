@@ -19,7 +19,7 @@ function reverseString(str) {
 // Second solution
 function reverseString2(str) {
     return str.split('').reverse().join('');
-}
+};
 
 // Third solution
 const reverseString3 = str => str.split('').reverse().join('');
